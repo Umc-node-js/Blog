@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Blog Post</title>
+  <link rel="stylesheet" href="../../public/stylesheets/postform.css">
+  <style>
+    /* CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Edit Blog Post</h1>
+  <form action="/posts/:id" method="post">
+    <label id="titleText" for="title">Title</label><br>
+    <input type="text" name="title" id="title" required><br><br>
+
+    <label for="content">Content</label><br>
+    <textarea name="content" id="content" rows="5" required></textarea><br><br>
+
+    <label for="tags">Tags</label>
+    <h4>Write a hashtag with #</h4>
+    <input type="text" name="tags" id="tags" required><br><br>
+
+    <input type="hidden" name="_method" value="PUT"> <!-- Add this hidden field to specify the method as PUT -->
+
+    <button type="submit">Update Post</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Blog Post</title>
+  <link rel="stylesheet" href="../../public/stylesheets/postform.css">
+  <style>
+    
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #333;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    background-color: aquamarine;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #00cccc;
+  }
+
+
+  </style>
+</head>
+<body>
+  <h1>New Blog Post</h1>
+  <form action="/posts" method="post">
+    <label id="titleText" for="title">Title</label><p/>
+    <input type="text" name="title" id="title" required><br><br>
+
+    <label for="content">Content</label><p/>
+    <textarea name="content" id="content" rows="5" required></textarea><br><br>
+
+    <label for="tags">Tags</label>
+    <h4>Write a hashtag with #</h4>
+    <input type="text" name="tags" id="tags" required><br><br>
+
+    <button type="submit">Create Post</button>
+  </form>
+</body>
+</html>
